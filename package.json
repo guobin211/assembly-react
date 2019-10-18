@@ -19,6 +19,7 @@
     "node": ">=10.0.0"
   },
   "scripts": {
+    "dev": "node ./dev/server.js",
     "lint": "tslint  --project tsconfig.json -t codeFrame 'src/**/*.ts' 'test/**/*.ts'",
     "prebuild": "rimraf dist",
     "build": "npm run asbuild && npm run tsbuild",
@@ -97,12 +98,13 @@
     "coveralls": "^3.0.2",
     "cross-env": "^5.2.0",
     "cz-conventional-changelog": "^2.1.0",
+    "express": "4.16.4",
     "husky": "^1.0.1",
     "jest": "^23.6.0",
     "jest-config": "^23.6.0",
     "lint-staged": "^8.0.0",
     "lodash.camelcase": "^4.3.0",
-    "prettier": "^1.14.3",
+    "prettier": "1.18.2",
     "prompt": "^1.0.0",
     "replace-in-file": "^3.4.2",
     "rimraf": "^2.6.2",
@@ -121,11 +123,6 @@
     "tslint-config-prettier": "^1.15.0",
     "tslint-config-standard": "^8.0.1",
     "typedoc": "^0.12.0",
-    "typescript": "^3.0.3",
-    "webpack": "^4.41.2",
-    "webpack-dev-server": "^3.8.2"
-  },
-  "dependencies": {
-    "core-js": "3"
+    "typescript": "^3.0.3"
   }
 }

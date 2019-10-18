@@ -1,7 +1,7 @@
 import AssemblyReact from '../src/assembly-react'
 
 /**
- * Dummy test
+ * AssemblyReact test
  */
 describe('AssemblyReact test', () => {
   it('works if true is truthy', () => {

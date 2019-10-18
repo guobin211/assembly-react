@@ -11,6 +11,14 @@ Assembly Web Libary.
 ### Usage
 
 ```bash
+npm install assembly-react --save
+
+import { AssemblyReact } from 'assembly-react'
+```
+
+### Develop
+
+```bash
 git clone https://github.com/guobin211/assembly-react YOURFOLDERNAME
 cd YOURFOLDERNAME
 
@@ -19,6 +27,7 @@ npm install
 ```
 
 ### Features
+
 
 ### NPM scripts
 
