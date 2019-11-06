@@ -1,6 +1,6 @@
 /* JSON */
-export interface JsonObject<T> {
-  [key: string]: T
+export interface JsonObject {
+  [key: string]: any
 }
 
 /* Array */
@@ -8,4 +8,4 @@ export interface ArrayObject<T> {
   [key: number]: T
 }
 
-export const GlobalMap: Map<string | number | JsonObject<any> | symbol, any> = new Map()
+export const GlobalMap: Map<string | number | JsonObject | symbol, any> = new Map()

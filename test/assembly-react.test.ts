@@ -1,4 +1,4 @@
-import AssemblyReact from '../src/assembly-react'
+import { AssemblyReact } from '../src/assembly-react'
 
 /**
  * AssemblyReact test
@@ -9,6 +9,6 @@ describe('AssemblyReact test', () => {
   })
 
   it('DummyClass is instantiable', () => {
-    expect(new AssemblyReact()).toBeInstanceOf(AssemblyReact)
+    expect(new AssemblyReact('app')).toBeInstanceOf(AssemblyReact)
   })
 })
