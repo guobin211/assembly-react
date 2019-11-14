@@ -9,7 +9,7 @@ export class AssemblyReact {
     if (el) {
       this.root = el
     } else {
-      throw new Error(`document.getElementById(id) is null`)
+      throw new Error(`document.getElementById(${id}) is null`)
     }
     this.children = new NativeButton({
       onClcik: function(ev: any) {
