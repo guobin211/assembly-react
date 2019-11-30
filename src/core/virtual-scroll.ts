@@ -13,13 +13,16 @@ import {
   VirtualScrollOptions,
 } from '../base/base-virtual-scroll'
 import { EventBus } from '../event/event-bus'
+import { isHTMLDivElement, isSafeStepNumber } from '../utils/check'
 
 export default class VirtualScroll<T> implements BaseVirtualScroll<T> {
+  $viewport: HTMLDivElement
+  $list: HTMLDivElement
   $data: T[]
   $index: number
   $step: number
   $event: EventBus
-  on(eventType: EventTypes, callbackFn: (ev?: ScrollEnd | ScrollEvent | ClickEvent) => void) {
+  on(eventType: EventTypes, callbackFn: (ev: ScrollEnd | ScrollEvent | ClickEvent) => void) {
     this.$event.register(eventType, callbackFn)
   }
   scrollTo(i: number) {}
@@ -31,7 +34,19 @@ export default class VirtualScroll<T> implements BaseVirtualScroll<T> {
       this.$data = options.data
       this.$event = new EventBus()
       this.$index = 0
-      this.$step = options.step
+      if (isSafeStepNumber(options.step)) {
+        this.$step = Number(options.step)
+        if (isHTMLDivElement(options.el)) {
+          this.$viewport =
+            typeof options.el === 'string'
+              ? (document.getElementById(options.el) as HTMLDivElement)
+              : options.el
+        } else {
+          throw new Error(`options.el must get a HTMLDivElement`)
+        }
+      } else {
+        throw new Error(`options.step must be Positive Int`)
+      }
     } else {
       throw new Error(`options.data must be Array`)
     }

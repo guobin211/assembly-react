@@ -3,7 +3,7 @@ import { EventBus } from "../event/event-bus";
 export interface VirtualScrollOptions<T> {
   el: string | HTMLDivElement
   data: T[]
-  step?: number
+  step?: number | string
 }
 
 export enum EventTypes {
@@ -36,6 +36,14 @@ export interface ClickEvent {
 
 
 export interface BaseVirtualScroll<T> {
+  /**
+   * viewport
+   */
+  $viewport: HTMLDivElement
+  /**
+   * scroll list
+   */
+  $list: HTMLDivElement
   /**
    * event listener
    */
@@ -70,5 +78,5 @@ export interface BaseVirtualScroll<T> {
    * @param eventType
    * @param callback
    */
-  on: (eventType: EventTypes, callbackFn: (ev?: ScrollEnd | ScrollEvent | ClickEvent) => void) => void
+  on: (eventType: EventTypes, callbackFn: (ev: ScrollEnd | ScrollEvent | ClickEvent) => void) => void
 }
