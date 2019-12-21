@@ -14,19 +14,20 @@ class Component {
 function createObserver(obj, fn) {
   return new Proxy(obj, {
     get(target, p, receiver) {
+      console.log(receiver)
       return target.p
     },
     set(target, p, value, receiver) {
       target.p = value
-      console.log('set');
+      console.log('set')
       fn(receiver)
     },
   })
 }
 
 function proxySet(obj, prop, value, component) {
-    obj[prop] = value;
-    component.$data[prop] = value
+  obj[prop] = value
+  component.$data[prop] = value
 }
 
 const div = new Component(jack)

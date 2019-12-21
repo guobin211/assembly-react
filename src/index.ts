@@ -27,7 +27,7 @@ const app = document.getElementById('app')
  */
 const warp = document.createElement('div')
 
-warp.setAttribute('style', `position: relative`)
+warp.setAttribute('style', 'position: relative')
 
 // list
 const divElements = createList(data)
@@ -36,7 +36,7 @@ for (const divElement of divElements) {
 }
 const divElement = document.createElement('div')
 // slider滑块
-const sliderWarp = `<div class="slider-warp"><div class="inner-warp"><span class="slipped"></span><span class="slider-btn"></span></div></div>`
+const sliderWarp = '<div class="slider-warp"><div class="inner-warp"><span class="slipped"></span><span class="slider-btn"></span></div></div>'
 divElement.innerHTML = sliderWarp
 warp.appendChild(divElement)
 
@@ -46,6 +46,7 @@ const itemHeight = (warp.childNodes[0] as HTMLDivElement).clientHeight
 // 第一个元素的高度
 console.log(itemHeight)
 // 实际总高度
+// eslint-disable-next-line no-unused-vars
 const allHeight = itemHeight * data.length
 // 容器总高度
 const warpHeight = itemHeight * 20
