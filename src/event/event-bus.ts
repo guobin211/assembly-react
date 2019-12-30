@@ -30,7 +30,7 @@ export class EventBus {
    */
   clearAll() {
     for (const key in this._eventMap) {
-      this.clearEvent(key as EventTypes);
+      this.clearEvent(key as EventTypes)
     }
   }
 

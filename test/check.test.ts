@@ -1,5 +1,6 @@
 import { isSafeStepNumber } from '../src/utils/check'
 
+
 describe('utils: check', () => {
   test('isSafeStepNumber: boolean', () => {
     expect(

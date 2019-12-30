@@ -40,6 +40,11 @@ module.exports = {
         "semi": [
             "error",
             "never"
-        ]
+        ],
+        "no-unused-vars": [0],
+        "no-redeclare": 1,//不允许重定义
+        "no-dupe-args": 1,//禁止重复参数
+        "no-dupe-keys": 1,//禁止重复键值
+        "camelcase":[1,{ "properties": "always" }],//驼峰命名
     }
 };

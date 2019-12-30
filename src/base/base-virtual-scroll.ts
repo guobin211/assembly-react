@@ -1,4 +1,4 @@
-import { EventBus } from "../event/event-bus";
+import { EventBus } from '../event/event-bus'
 
 export interface VirtualScrollOptions<T> {
   el: string | HTMLDivElement
