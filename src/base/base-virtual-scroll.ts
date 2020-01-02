@@ -69,6 +69,8 @@ export interface BaseVirtualScroll<T> {
    * @param i
    */
   scrollTo: (i: number) => void
+
+
   /**
    * dom render
    */

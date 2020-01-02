@@ -3,7 +3,9 @@
  * @param tag
  * @param attrs
  */
-export function createElement(tag: string, attrs?: {[key: string]: string}) {
+import { HtmlTags, SvgTags } from '../base/tags-type'
+
+export function createElement(tag: HtmlTags | SvgTags, attrs?: {[key: string]: string}) {
   const element = document.createElement(tag)
   if (attrs) {
     for (const attrsKey in attrs) {
