@@ -1,10 +1,11 @@
-'use strict';
+'use strict'
 module.exports = {
   singleQuote: true,
   trailingComma: 'all',
   printWidth: 100,
   proseWrap: 'never',
   jsxBracketSameLine: true,
+  semi: false,
   overrides: [
     {
       files: '.prettierrc',
@@ -19,4 +20,4 @@ module.exports = {
       },
     },
   ],
-};
+}
